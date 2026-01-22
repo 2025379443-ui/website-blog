@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Travel Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 1. RESET & FONTS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body, html {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        /* 2. TOPPER (HEADER) - Exact same as your other pages */
+       header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the menu */
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px; /* Exact same font size for all */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    position: absolute;
+    right: 40px; /* Keeps icons far right */
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+        /* 3. CENTERED CONTENT SECTION (Olive Green) */
+        .blog-intro {
+            width: 100%;
+            background-color: #434934; /* Your Olive Green */
+            color: white;
+            padding: 80px 15%; /* Extra padding on sides to keep text in middle */
+            text-align: center; /* Centers all text */
+        }
+
+        .blog-intro h2 {
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .blog-intro p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* 4. GALLERY SECTION - 5 Images */
+        .blog-gallery {
+            width: 100%;
+            display: flex;
+            height: 400px; /* Adjust height as you like */
+        }
+
+        .photo-space {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            border-right: 1px solid #fff; /* Thin white line between photos */
+            background-color: #f4f4f4;
+        }
+
+        /* Remove border from the last photo */
+        .photo-space:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+	<body> <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="desnitation.html">DESTINATION</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+    <a href="https://www.tiktok.com" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </header>
+
+    </body>
+
+    <section class="blog-intro">
+        <h2>TRAVEL STORIES FROM CHINA</h2>
+        <p>
+            This section contains my personal travel experiences in China, focusing on Chengdu and Chongqing. 
+            Each post reflects my observations of places, food, culture, and daily life during my journey. 
+            Through this blog, I document memorable moments, popular attractions, and everyday experiences 
+            from a personal perspective. These stories also reflect what I learned about local lifestyles and 
+            cultural differences while traveling in China.
+        </p>
+    </section>
+
+    <section class="blog-gallery">
+        <div class="photo-space" style="background-image: url('IMG/blog5.jpg')"></div>
+        <div class="photo-space" style="background-image: url('IMG/blog6.jpg')"></div>
+        <div class="photo-space" style="background-image: url('IMG/blog7.jpg')"></div>
+        <div class="photo-space" style="background-image: url('IMG/blog11.jpg')"></div>
+        <div class="photo-space" style="background-image: url('IMG/cq8.jpg')"></div>
+    </section>
+
+</body>
+</html>
