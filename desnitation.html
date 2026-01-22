@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Journey - Chengdu & Chongqing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* 1. RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        
+        body, html { 
+            width: 100%; 
+            background-color: #434934; /* Match the olive green of your images */
+        }
+
+        /* 2. THE TOPPER (HEADER) - Strictly White */
+       header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the menu */
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px; /* Exact same font size for all */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    position: absolute;
+    right: 40px; /* Keeps icons far right */
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+        /* 3. MAIN CONTENT - No gap between sections */
+        .travel-section {
+            width: 100%;
+            padding: 60px 8%;
+            display: flex;
+            align-items: center;
+            gap: 5%;
+            color: white; /* Text color inside green areas */
+        }
+
+        .text-content { flex: 1; }
+        .text-content h2 { 
+            text-transform: uppercase; 
+            margin-bottom: 25px; 
+            font-size: 22px; 
+            letter-spacing: 1px;
+        }
+        .text-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
+
+        /* 4. SLIDER SYSTEM */
+        .slider-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slider-frame {
+            width: 450px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 8px solid white; /* Frame style */
+            background-color: #000;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .slide-img.active { opacity: 1; }
+
+        /* ARROWS */
+        .arrow {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 60px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 10;
+            user-select: none;
+        }
+        .arrow:hover { opacity: 0.7; }
+        .prev-arrow { left: -75px; }
+        .next-arrow { right: -75px; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="desnitation.html">DESTINATION</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+    <a href="https://www.tiktok.com" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </header>
+
+    <section class="travel-section">
+        <div class="text-content">
+            <h2>WHAT I DISCOVER IN CHENGDU</h2>
+            <p>During my visit to Chengdu, I explored the city and visited the Chengdu Panda Base, where I was able to see many giant pandas up close at one of the city’s most viral attractions.</p>
+            <p>The next day, I spent my time exploring popular areas around Chengdu, going shopping, and trying local Sichuan food. </p>
+			<p>The spicy dishes were a new experience for me, and they allowed me to better understand the local culture. Overall, my trip to Chengdu was enjoyable and memorable.</p>
+        </div>
+
+        <div class="slider-container">
+            <button class="arrow prev-arrow" onclick="moveSlide('chengdu', -1)">&#9664;</button>
+            <div class="slider-frame" id="chengdu-slider">
+                <div class="slide-img active" style="background-image: url('IMG/cgd7.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cgd2.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cgd9.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cgd3.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cgd6.jpg')"></div>
+				<div class="slide-img" style="background-image: url('IMG/cgd4.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cgd8.jpg')"></div>
+            </div>
+            <button class="arrow next-arrow" onclick="moveSlide('chengdu', 1)">&#9654;</button>
+        </div>
+    </section>
+
+    <section class="travel-section">
+        <div class="text-content">
+            <h2>WHAT I DISCOVER IN CHONGQING</h2>
+            <p>I  traveled to Chongqing by train and spent my time exploring the city. One of the highlights of my visit was the skywalk, where I could see the beautiful city lights from above, especially at night.</p>
+            <p>After that, I visited Hongyadong, an iconic landmark that is famous for its striking appearance and vibrant atmosphere at night.</p>
+			<p> I also tried Chongqing hotpot, which was very spicy and gave me an authentic taste of the local food. Overall, my experience in Chongqing was exciting and unforgettable</p>
+        </div>
+
+        <div class="slider-container">
+            <button class="arrow prev-arrow" onclick="moveSlide('chongqing', -1)">&#9664;</button>
+            <div class="slider-frame" id="chongqing-slider">
+                <div class="slide-img active" style="background-image: url('IMG/cq 1.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cq4.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cq3.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cq5.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cq7.jpg')"></div>
+				<div class="slide-img" style="background-image: url('IMG/cq8.jpg')"></div>
+                <div class="slide-img" style="background-image: url('IMG/cq 1.jpg')"></div>
+            </div>
+            <button class="arrow next-arrow" onclick="moveSlide('chongqing', 1)">&#9654;</button>
+        </div>
+    </section>
+
+    <script>
+        const sliderStates = { chengdu: 0, chongqing: 0 };
+
+        function moveSlide(sliderId, direction) {
+            const container = document.getElementById(sliderId + '-slider');
+            const slides = container.getElementsByClassName('slide-img');
+            slides[sliderStates[sliderId]].classList.remove('active');
+            sliderStates[sliderId] = (sliderStates[sliderId] + direction + slides.length) % slides.length;
+            slides[sliderStates[sliderId]].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

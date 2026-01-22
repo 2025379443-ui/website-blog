@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najihah's Personal Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* THE TOPPER (HEADER) - Exact Alignment */
+       header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the menu */
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px; /* Exact same font size for all */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    position: absolute;
+    right: 40px; /* Keeps icons far right */
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+        /* GREEN CONTENT SECTION */
+        .intro-section {
+            width: 100%;
+            background-color: #434934; /* Exact Olive Green from image */
+            color: white;
+            padding: 50px 8%;
+            display: flex;
+            gap: 50px;
+        }
+
+        .intro-column {
+            flex: 1;
+        }
+
+        .intro-column h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-transform: uppercase; /* ALL CAPS */
+        }
+
+        .intro-column p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* PHOTO GALLERY SECTION - 4 Photos */
+        .photo-gallery {
+            width: 100%;
+            display: flex;
+            height: 400px;
+        }
+
+        .photo-space {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            border-right: 1px solid #fff;
+            background-color: #f4f4f4;
+        }
+
+        /* Functionality classes */
+        .sub-page { display: none; padding: 100px; text-align: center; }
+        .active-page { display: block !important; }
+    </style>
+</head>
+<body>
+<body> <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="desnitation.html">DESTINATION</a></li>
+            </ul>
+        </nav>
+       <div class="social-icons">
+    <a href="https://www.tiktok.com" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </header>
+
+    </body>
+
+    <div id="home">
+        <section class="intro-section">
+            <div class="intro-column">
+                <h2>HELLO WELCOME TO MY PERSONAL BLOG</h2>
+                <p>Hi, I'm Najihah 👋</p>
+                <p>This is my personal travel blog, created to document my journey exploring China.</p>
+            </div>
+            <div class="intro-column">
+                <h2>ABOUT THIS BLOG</h2>
+                <p>This blog focuses on my travel experiences in Chengdu and Chongqing.</p>
+                <p>Through this website, I share my observations of local places, food, culture, and everyday life from a personal perspective.</p>
+            </div>
+        </section>
+
+        <section class="photo-gallery">
+            <div class="photo-space" style="background-image: url('IMG/about1.jpg')"></div>
+            <div class="photo-space" style="background-image: url('IMG/about2.jpg')"></div>
+            <div class="photo-space" style="background-image: url('IMG/about4.jpg')"></div>
+            <div class="photo-space" style="background-image: url('IMG/about6.jpg')"></div>
+        </section>
+    </div>
+
+    <section id="about" class="sub-page"><h2>ABOUT ME CONTENT</h2></section>
+    <section id="blog" class="sub-page"><h2>BLOG CONTENT</h2></section>
+    <section id="destination" class="sub-page"><h2>DESTINATION CONTENT</h2></section>
+
+    <script>
+        function showPage(id) {
+            // Hide Home
+            document.getElementById('home').style.display = 'none';
+            // Hide other subpages
+            document.querySelectorAll('.sub-page').forEach(page => {
+                page.classList.remove('active-page');
+            });
+            // Show the clicked page
+            document.getElementById(id).classList.add('active-page');
+        }
+
+        function showSection(id) {
+            if(id === 'home') {
+                document.getElementById('home').style.display = 'block';
+                document.querySelectorAll('.sub-page').forEach(page => {
+                    page.classList.remove('active-page');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
